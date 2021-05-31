@@ -1,0 +1,17 @@
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.itl.cat/pngfile/big/302-3026800_paris-theatre-in-manhattan.jpg);">
+  <div class="container">
+    <h1>Save any kind of movie</h1>
+    <p>Watcher is the all-in-one place to store everything you want to see</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list), class: "col-md-6" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://c4.wallpaperflare.com/wallpaper/22/762/507/film-movie-filmmaker-movie-director-wallpaper-preview.jpg)">
+            <%= list.name %>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
